@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500" prefWidth="800" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mg.entraide.controller.MainFxmlController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu fx:id="fileMenu" mnemonicParsing="true" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuItemOpenEvent" text="Open project" />
+                    </items>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuItemSaveEvent" text="Save project" />
+                    </items>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuItemExitEvent" text="Close " />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="About">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+   
+    <left>
+        <GridPane fx:id="gridPaneScreen" prefHeight="284.0" prefWidth="75">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="92.0" />
+                <RowConstraints prefHeight="92.0" />
+                <RowConstraints prefHeight="92.0" />
+                <RowConstraints prefHeight="92.0" />
+
+            </rowConstraints>
+            <children>
+                <VBox prefHeight="200.0" prefWidth="60.0" GridPane.rowIndex="0">
+                    <children>
+                        <ImageView fx:id="imageViewHost" fitHeight="75.0" fitWidth="75.0" onMouseClicked="#imageViewHostOnClickedEvent">
+                            <image>
+                                <Image url="/mg/entraide/images/host-enabled.png" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="75.0" text="Host" textAlignment="RIGHT">
+                            <font>
+                                <Font name="Arial Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="60.0" GridPane.rowIndex="1">
+                    <children>
+                        <ImageView fx:id="imageViewRouter" fitHeight="75.0" fitWidth="75.0" onMouseClicked="#imageViewRouterOnClickedEvent">
+                            <image>
+                                <Image url="/mg/entraide/images/router-enabled.png" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="75.0" text="Router" textAlignment="RIGHT">
+                            <font>
+                                <Font name="Arial Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="60.0" GridPane.rowIndex="2">
+                    <children>
+                        <ImageView fx:id="imageViewWired" fitHeight="75.0" fitWidth="75.0" onMouseClicked="#imageViewWiredOnClickedEvent">
+                            <image>
+                                <Image url="/mg/entraide/images/wired-enabled.png" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="75.0" text="Wire" textAlignment="RIGHT">
+                            <font>
+                                <Font name="Arial Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="60.0" GridPane.rowIndex="3">
+                    <children>
+                        <ImageView fx:id="imageViewClear" fitHeight="75.0" fitWidth="75.0" onMouseClicked="#imageViewClearOnClickedEvent" onMousePressed="#imageViewClearOnPressedEvent" onMouseReleased="#imageViewClearOnReleasedEvent">
+                            <image>
+                                <Image url="/mg/entraide/images/remove.png" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="75.0" text="Clear" textAlignment="RIGHT">
+                            <font>
+                                <Font name="Arial Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+    </left>  
+    <center>
+        <ScrollPane fx:id="scrollPaneScreen" prefViewportHeight="500.0" prefViewportWidth="420.0">
+            <content>
+                <Pane fx:id="paneScreen" onMouseClicked="#paneOnMouseClickedEvent" prefHeight="1200.0" prefWidth="1200.0" BorderPane.alignment="CENTER" />
+            </content>
+        </ScrollPane>
+    </center> 
+          
+   
+</BorderPane>

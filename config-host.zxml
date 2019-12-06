@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hosts>
+    <host>
+        <hostName>Host0</hostName>
+        <interface>
+            <interface>
+                <interfaceName>eth0</interfaceName>
+                <interfacePosition>none</interfacePosition>
+                <interfaceStatus>0</interfaceStatus>
+                <positionHostX>145.29998779296875</positionHostX>
+                <positionHostY>157.5</positionHostY>
+                <routeurName>Host0</routeurName>
+                <ipAddress>
+                    <ipAddress>192.168.0.2</ipAddress>
+                    <ipMask>255.255.255.0</ipMask>
+                    <ipNetwork>192.168.0.0</ipNetwork>
+                </ipAddress>
+            </interface>
+            <interface>
+                <interfaceName>eth1</interfaceName>
+                <interfacePosition>none</interfacePosition>
+                <interfaceStatus>0</interfaceStatus>
+                <positionHostX>145.29998779296875</positionHostX>
+                <positionHostY>157.5</positionHostY>
+                <routeurName>Host0</routeurName>
+                <ipAddress/>
+            </interface>
+        </interface>
+    </host>
+</hosts>
